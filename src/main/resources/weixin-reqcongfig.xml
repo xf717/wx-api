@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weixin-req>
+  	<!-- 开发者接口调用凭据  -->
+    <!-- 获取TOKEN  -->
+    <req key="access_token" method="get" url="https://api.weixin.qq.com/cgi-bin/token?1=1"></req>
+    <!-- 获取微信服务器IP地址 -->
+    <req key="getcallbackip" method="get" url="https://api.weixin.qq.com/cgi-bin/getcallbackip?1=1"></req>
+    
+    <!-- 发送消息 -->
+    <!-- 模版消息接口 -->
+    <!-- 设置所属行业 -->
+    <req key="industryTemplateSet" method="post" datatype="json" url="https://api.weixin.qq.com/cgi-bin/template/api_set_industry?1=1"></req>
+    <!-- 获取模版 -->
+    <req key="industryTemplateAdd" method="post" datatype="json" url="https://api.weixin.qq.com/cgi-bin/template/api_add_template?1=1"></req>
+    <!-- 发送消息模版 -->
+    <req key="industryTemplateMessageSend" method="post" datatype="json" url="https://api.weixin.qq.com/cgi-bin/message/template/send?1=1"
+    	mappingHandler="org.wx.api.core.handler.impl.WeixinReqTemplateMessageHandler"></req>
+    <!-- 获取自动回复规则 -->
+    <req key="autoReplyRuleGet" method="get" url="https://api.weixin.qq.com/cgi-bin/get_current_autoreply_info?1=1"></req>
+    
+    <!-- 微信网页授权 -->
+    <!-- 通过code换取网页授权access_token -->
+    <req key="oauth2GetAccessToken" method="get" url="https://api.weixin.qq.com/sns/oauth2/access_token?1=1"></req>
+    <!-- 刷新access_token（如果需要） -->
+    <req key="oauth2RefreshToken" method="get" url="https://api.weixin.qq.com/sns/oauth2/refresh_token?1=1"></req>
+    <!-- 通过网页授权获取用户信息 -->
+    <req key="getSnsUserInfo" method="get" url="https://api.weixin.qq.com/sns/userinfo?1=1"></req>
+    <!-- 检验授权凭证（access_token）是否有效 -->
+    <req key="snsAuth" method="get" url="https://api.weixin.qq.com/sns/auth?1=1"></req>
+    
+    <!-- 用户管理 -->
+    <!-- 用户分组管理 -->
+    <req key="groupCreate" method="post" datatype="json" url="https://api.weixin.qq.com/cgi-bin/groups/create?1=1"></req>
+    <!-- 查询所有分组 -->
+    <req key="groupsGet" method="get" url="https://api.weixin.qq.com/cgi-bin/groups/get?1=1"></req>
+    <!-- 查询用户所在分组 -->
+    <req key="groupsGetid" method="post" datatype="json" url="https://api.weixin.qq.com/cgi-bin/groups/getid?1=1"></req>
+    <!-- 修改分组名 -->
+    <req key="groupUpdate" method="post" datatype="json" url="https://api.weixin.qq.com/cgi-bin/groups/update?1=1"></req>
+    <!-- 移动用户分组 -->
+    <req key="groupMembersUpdate" method="post" datatype="json" url="https://api.weixin.qq.com/cgi-bin/groups/members/update?1=1"></req>
+    <!-- 批量移动用户分组 -->
+    <req key="batchGroupMembersUpdate" method="post" datatype="json" url="https://api.weixin.qq.com/cgi-bin/groups/members/batchupdate?1=1"></req>
+     <!-- 删除分组 -->
+    <req key="groupDelete" method="post" datatype="json" url="https://api.weixin.qq.com/cgi-bin/groups/delete?1=1"></req>
+    <!-- 设置备注名 -->
+    <req key="userRemarkUpdate" method="post" datatype="json" url="https://api.weixin.qq.com/cgi-bin/user/info/updateremark?1=1"></req>
+    <!-- 获取用户基本信息(UnionID机制) -->
+    <req key="getUserBaseInfo" method="get" datatype="param" url="https://api.weixin.qq.com/cgi-bin/user/info?1=1"></req>
+    <!-- 批量获取用户信息 -->
+    <req key="batchgetUserInfo" method="post" datatype="json" url="https://api.weixin.qq.com/cgi-bin/user/info/batchget?1=1"></req>
+    <!-- 获取用户列表 -->
+    <req key="getUserInfoList" method="get" datatype="param" url="https://api.weixin.qq.com/cgi-bin/user/get?1=1"></req>
+    
+    
+    <!-- 自定义菜单接口 -->
+    <!-- 创建菜单 -->
+    <req key="createMenu" method="post" datatype="json" url="https://api.weixin.qq.com/cgi-bin/menu/create?1=1"></req>
+     <!-- 自定义菜单查询接口 -->
+    <req key="getMenu" method="get" url="https://api.weixin.qq.com/cgi-bin/menu/get?1=1"></req>
+    <!-- 删除菜单 -->
+    <req key="deleteMenu" method="get" url="https://api.weixin.qq.com/cgi-bin/menu/delete?1=1"></req>
+    <!-- 获取自定义菜单配置接口 -->
+    <req key="menuConfigureGet" method="get" url="https://api.weixin.qq.com/cgi-bin/get_current_selfmenu_info?1=1"></req>
+</weixin-req>
